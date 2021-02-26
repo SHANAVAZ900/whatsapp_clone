@@ -33,7 +33,7 @@ function SidebarChat({id,name,addNewChat}) {
         
     ) : (
         <div onClick={createChat} className="sidebarChat">
-            <h3 className="add-new-chat-title">Add New Chat</h3>
+            <h2>Add New Chat</h2>
         </div>
     )
 }
