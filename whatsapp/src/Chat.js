@@ -14,6 +14,7 @@ function Chat() {
     const [seed, setSeed]  = useState('');
     const {roomId} = useParams();
     const [roomName, setRoomName] = useState("");
+    const [messages, setMessages] = useState([]);
 
     useEffect(()=>{
         if(roomId){
@@ -21,6 +22,9 @@ function Chat() {
                 setRoomName(snapshot.data().name);
             });
 
+            db.collection('rooms').doc(roomId).collection("messages").orderBy("timestamp","asc").onSnapshot(snapshot => {
+                setMessages(snapshot.docs.map(doc => doc.data()))
+            });
         }
     },[roomId])
     
@@ -55,13 +59,14 @@ function Chat() {
                     </IconButton>
                 </div>
             </div>
-            <div className="chat__body">
-                <p className={`chat__message ${true && 'chat__reciever'}`}>
-                    <span className="chat__name">navaz</span>
-                    hello world
-                    <span className="chat__timestamp">1:38p.m</span>
-                </p>
-                
+            <div className='chat_body'>
+                {messages.map(message => (
+                    <p className={`chat_message ${ message.name == user.displayName && 'chat_receiver'}`}>
+                        <span className="chat_name">{message.name}</span>
+                        {message.message}
+                        <span className="chat_timestemp">{new Date(message.timestamp?.toDate()).toUTCString()}</span>
+                    </p>
+                ))}
             </div>
             <div className="chat__footer">
                 <InsertEmoticonIcon />
