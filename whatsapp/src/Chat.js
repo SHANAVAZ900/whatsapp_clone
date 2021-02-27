@@ -6,6 +6,8 @@ import MicIcon from '@material-ui/icons/Mic';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import { useParams } from 'react-router-dom';
 import db from './firebase';
+import {useStateValue} from "./StateProvider";
+
 
 
 
@@ -15,6 +17,7 @@ function Chat() {
     const {roomId} = useParams();
     const [roomName, setRoomName] = useState("");
     const [messages, setMessages] = useState([]);
+    const [{user}, dispatch] = useStateValue();
 
     useEffect(()=>{
         if(roomId){
@@ -59,12 +62,12 @@ function Chat() {
                     </IconButton>
                 </div>
             </div>
-            <div className='chat_body'>
+            <div className='chat__body'>
                 {messages.map(message => (
-                    <p className={`chat_message ${ message.name == user.displayName && 'chat_receiver'}`}>
-                        <span className="chat_name">{message.name}</span>
+                    <p className={`chat__message ${ message.name == user.displayName && 'chat_receiver'}`}>
+                        <span className="chat__name">{message.name}</span>
                         {message.message}
-                        <span className="chat_timestemp">{new Date(message.timestamp?.toDate()).toUTCString()}</span>
+                        <span className="chat__timestemp">{new Date(message.timestamp?.toDate()).toUTCString()}</span>
                     </p>
                 ))}
             </div>
@@ -82,3 +85,6 @@ function Chat() {
 }
 
 export default Chat
+
+
+
