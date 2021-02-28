@@ -39,7 +39,7 @@
     background-repeat: repeat;
     background-position: center;
     padding: 30px;
-    overflow:scroll;
+    overflow:auto;
 }
 
 .chat__message{
@@ -59,7 +59,7 @@
     font-size: xx-small;
 }
 
-.chat_timestamp{
+.chat__timestamp{
     margin-left: 10px;
     font-size: xx-small;
 }
