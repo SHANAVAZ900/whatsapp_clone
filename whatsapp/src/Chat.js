@@ -54,8 +54,7 @@ function Chat() {
                     <p>
                         Last seen {" "}
                         {new Date(
-                            messages[messages.length - 1]?.
-                            timestamp?.toDate()
+                            messages[messages.length - 1]?.timestamp?.toDate()
                         ).toUTCString()}
                     </p>
                 </div>
@@ -75,11 +74,9 @@ function Chat() {
             <div className='chat__body'>
                 {messages.map(message => (
                     <p className={`chat__message ${ message.name === user.displayName && 'chat__receiver'}`}>
-                        <span className="chat__name">
-                            {message.name}
-                        </span>
+                        <span className="chat__name"> {message.name} </span>
                         {message.message}
-                        <span className="chat__timestemp">
+                        <span className="chat__timestamp">
                             {new Date(message.timestamp?.toDate()).toUTCString()}
                         </span>
                     </p>
@@ -99,6 +96,3 @@ function Chat() {
 }
 
 export default Chat
-
-
-
