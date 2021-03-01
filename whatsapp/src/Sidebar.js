@@ -33,7 +33,16 @@ function Sidebar() {
             unsubscribe();
         }
     },[]);
+    const createChat = () => {
+        const roomName = prompt("Please Enter Name for Chat");
 
+        if(roomName){
+            db.collection("rooms").add({
+                //should be same column name as firebase database
+                name: roomName
+            })
+        }
+    };
 
     return (
         <div className="sidebar">
@@ -45,7 +54,9 @@ function Sidebar() {
                         <DonutLargeIcon />
                     </IconButton>
                     <IconButton>
-                        <ChatIcon />
+                        <div onClick={createChat} className="sidebarChat">
+                            <ChatIcon />
+                        </div>  
                     </IconButton>
                     <IconButton>
                         <MoreVertIcon />
