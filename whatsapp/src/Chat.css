@@ -54,14 +54,14 @@
 
 .chat__name{
     position: absolute;
-    top:-15px;
-    font-weight: 800;
-    font-size: xx-small;
+    top:-25px;
+    font-weight: 600;
+    font-size:medium;
 }
 
 .chat__timestamp{
     margin-left: 10px;
-    font-size: xx-small;
+    font-size: small;
 }
 
 .chat__receiver{
