@@ -65,9 +65,13 @@ Coming to Firebase
 
 Here is the video firebase login through my account:https://drive.google.com/file/d/1qxOzRKoUQQIBUgXKZ_G9yB95JnuodRkE/view?usp=sharing
 
-For installing firebase at the terminal:![](Images/firebase-1.png)
+For installing firebase at the terminal:
 
-For deploying Firebase at the Terminal:![](Images/firebase2.png)
+![](Images/firebase-1.png)
+
+For deploying Firebase at the Terminal:
+
+![](Images/firebase-2.png)
 
 Also my first day completion in the Main branch video:https://drive.google.com/file/d/16uEmqemvyJheZbYQzmVmF-kUyj-NIUdz/view?usp=sharing
 
