@@ -79,7 +79,7 @@ Also my first day completion in the Main branch video:https://drive.google.com/f
 
 ### Also my first day completion image:![](Images/main.png)
 
-#### So,my first day of my project is completed as shown in above images and videos
+#### So,my first day of my project is completed as shown in above images and videos.
 
 
 
