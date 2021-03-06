@@ -46,6 +46,7 @@ command:cd whatsapp in the terminal.
 
 ## my first day task is:
 To add avatars using material UI and here is the installation command:npm install @material-ui/core
+
 website Link:https://material-ui.com/
 or npm i @material-ui/core
 
